@@ -3,24 +3,16 @@
         <title>Tech Is For Women</title>
     </head>
     <body>
+      <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
         <div>
-            <h1><a href="/">Mulheres na Tecnologia</a></h1>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Virginia “Ginni” Rometty</a></h2>
-            <p>Ginni, como é chamada, é a atual CEO e Chairwoman da IBM desde 2012, e é a primeira mulher a ser líder da centenária companhia. Antes de se tornar CEO, trabalhou na empresa por 30 anos, ocupando posições de Vice-Presidente Sênior e Executiva de Vendas, Marketing e Estratégia.
-
-Bacharel em ciência da computação e engenharia elétrica, Ginni trabalhou para o General Motors Institute e entrou na IBM como engenheira de sistemas. Citada por diversas revistas e incluída em vários rankings, Ginni alcançou o topo da lista de mulheres mais poderosas dos negócios em 2012, pela revista Fortune.</p>
-        </div>
-
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Susan Wojcicki</a></h2>
-            <p>Wojcicki nasceu em Santa Clara County, Califórnia. É filha de Esther Wojcicki, uma educadora de ascendência russa judaica, e Stanley Wojcicki, professor de Física na Universidade de Stanford de ascendência polaca. Tem duas irmãs, a doutora em antropologia e epidemiologia, Janet Wojcicki[3] e a bióloga fundadora da 23andMe, Anne Wojcicki. Cresceu no campus da Stanford com George Dantzig como vizinho[4] e frequentou a Gunn High School, em Palo Alto, California, aonde escreveu para o jornal da escola[5].
-
-Wojcicki estudou história e literatura na Universidade de Harvard, se graduando com honras em 1990. Fez mestrado em Ciência e Economia pela Universidade da Califórnia, Santa Cruz, em 1993 e mestrado em Administração de Empresas pela UCLA Anderson School of Management em 1998[6].</p>
-        </div>
+    {% endfor %}
     </body>
 </html>
